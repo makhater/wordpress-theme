@@ -58,7 +58,7 @@
                     <div class="ss-copyright">
 
                         <span class="mak-copyright"> <?= esc_html(get_theme_mod('copyright_text')); ?></span>
-                        <span class="mak-designedby"> Designed by <a href="<?= get_theme_mod('designedby_link'); ?>"><?= esc_html(get_theme_mod('designedby_text')); ?></a></span>
+                        <span class="mak-designedby"> Designed by <a href="<?= esc_url(get_theme_mod('designedby_link')); ?>"><?= esc_html(get_theme_mod('designedby_text')); ?></a></span>
 
                     </div>
                 </div>
@@ -83,7 +83,7 @@
 
 
 
-        <?php wp_body_open(); ?>
+        </div><!-- end #page -->
         </body>
 
         </html>
