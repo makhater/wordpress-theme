@@ -16,7 +16,7 @@ $queryApp = new WP_Query(array('category_name' => 'app'));
 
 <!-- # site-content
         ================================================== -->
-<section id="content" class="s-content">
+<main id="content" class="s-content">
 
 
 
