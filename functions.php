@@ -58,7 +58,7 @@ function khater_enqueue_styles()
         'khater_vendor',
         get_theme_file_uri('assets/css/vendor.css'),
         [],
-        '1.0',
+        wp_get_theme()->get('Version'),
         'all'
     );
 
@@ -100,7 +100,7 @@ function khater_enqueue_scripts()
         'khater_plugins',
         get_theme_file_uri('assets/js/plugins.js'),
         [],
-        false,
+        wp_get_theme()->get('Version'),
         true
 
     );
@@ -108,8 +108,8 @@ function khater_enqueue_scripts()
         'khater_fontawesome',
         get_theme_file_uri('assets/js/fontawesome/all.min.js'),
         [],
-        false,
-        false
+        wp_get_theme()->get('Version'),
+        true
 
     );
     wp_enqueue_script(
