@@ -76,14 +76,8 @@
         </footer> <!-- end footer -->
 
 
-        <?php wp_footer(); ?>
-
-        <!-- Java Script
-    ================================================== -->
-
-
-
         </div><!-- end #page -->
+        <?php wp_footer(); ?>
         </body>
 
         </html>
