@@ -28,7 +28,8 @@
 </head>
 
 
-<body id="top" <?php body_class() ?>>
+<body id="top" <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 
 
     <!-- preloader
