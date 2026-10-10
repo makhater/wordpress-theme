@@ -56,7 +56,7 @@
 
                     </div>
 
-                    <a class="s-header__menu-toggle" href="#site-navigation"><span>Menu</span></a>
+                    <a class="s-header__menu-toggle" href="#site-navigation" aria-controls="site-navigation" aria-expanded="false"><span>Menu</span></a>
                 </div> <!-- end s-header__block -->
 
 
@@ -65,6 +65,7 @@
                     'theme_location'  => 'khater-main-menu',
                     'menu_class'      => 's-header__nav',
                     'container'       => 'nav',
+                    'container_id'    => 'site-navigation',
                     'container_class' => 's-header__nav',
                     'add_a_class'     => 'smoothscroll',
                 ]);
