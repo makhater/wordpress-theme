@@ -4,12 +4,12 @@ function khater_theme_setup()
 {
 
     add_theme_support('title-tag');
-    add_theme_support('html5');
+    add_theme_support('html5', ['search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script']);
 
     add_theme_support('custom-logo', [
         'height' => 300,
         'width'  => 50,
-        'flex-width'  => false,
+        'flex-width'  => true,
         'flex-height'  => true,
     ]);
 
@@ -31,9 +31,9 @@ function khater_theme_setup()
 
     set_post_thumbnail_size(150, 150, true);
 
-    add_theme_support('widgets');
+    add_theme_support('customize-selective-refresh-widgets');
 
-    register_nav_menu('khater-Main-menu', 'Khater Main Menu');
+    register_nav_menu('khater-main-menu', 'Khater Main Menu');
     register_nav_menu('Khater-social-menu', 'Khater Social Menu');
 }
 
@@ -55,7 +55,7 @@ add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
 function khater_enqueue_styles()
 {
     wp_register_style(
-        'khater_vender',
+        'khater_vendor',
         get_theme_file_uri('assets/css/vendor.css'),
         [],
         '1.0',
@@ -63,7 +63,7 @@ function khater_enqueue_styles()
     );
 
     wp_register_style(
-        'khater_vender-rtl',
+        'khater_vendor-rtl',
         get_theme_file_uri('assets/css/vendor-rtl.css'),
         [],
         '1.0',
@@ -75,7 +75,7 @@ function khater_enqueue_styles()
         wp_enqueue_style(
             'khater_styles-rtl',
             get_theme_file_uri('assets/css/styles-rtl.css'),
-            ['khater_vender-rtl'],
+            ['khater_vendor-rtl'],
             false,
             'all'
         );
@@ -84,7 +84,7 @@ function khater_enqueue_styles()
         wp_enqueue_style(
             'khater_styles',
             get_theme_file_uri('assets/css/styles.css'),
-            ['khater_vender'],
+            ['khater_vendor'],
             false,
             'all'
         );
@@ -268,7 +268,5 @@ function khater_register_widgets()
 
 add_action('widgets_init', 'khater_register_widgets');
 
-
-add_filter('wp_is_application_passwords_available', '__return_true');
 
 require_once __DIR__ . '/inc/theme-customizer.php';
