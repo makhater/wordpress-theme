@@ -390,7 +390,7 @@ $queryApp = new WP_Query(array('category_name' => 'app'));
     </section>
 
 
-</section> <!-- end s-content -->
+</main> <!-- end s-content -->
 
 
 <?php get_footer(); ?>
