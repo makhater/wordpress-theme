@@ -66,7 +66,7 @@ function khater_enqueue_styles()
         'khater_vendor-rtl',
         get_theme_file_uri('assets/css/vendor-rtl.css'),
         [],
-        '1.0',
+        wp_get_theme()->get('Version'),
         'all'
     );
 
@@ -76,7 +76,7 @@ function khater_enqueue_styles()
             'khater_styles-rtl',
             get_theme_file_uri('assets/css/styles-rtl.css'),
             ['khater_vendor-rtl'],
-            false,
+            wp_get_theme()->get('Version'),
             'all'
         );
     } else {
@@ -85,7 +85,7 @@ function khater_enqueue_styles()
             'khater_styles',
             get_theme_file_uri('assets/css/styles.css'),
             ['khater_vendor'],
-            false,
+            wp_get_theme()->get('Version'),
             'all'
         );
     }
@@ -116,7 +116,7 @@ function khater_enqueue_scripts()
         'khater_main',
         get_theme_file_uri('assets/js/main.js'),
         ['khater_plugins', 'khater_fontawesome', 'jquery'],
-        false,
+        wp_get_theme()->get('Version'),
         true
     );
 }
