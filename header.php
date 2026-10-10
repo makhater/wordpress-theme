@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= get_locale(); ?>" class="no-js" dir="<?= is_rtl() ? 'rtl' : 'ltr' ?>">
+<html <?php language_attributes(); ?> class="no-js">
 
 <head>
 
@@ -7,14 +7,13 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Booth</title>
 
     <script>
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
     </script>
 
-    <?php wp_head() ?>
+    <?php wp_head(); ?>
 
     <!-- CSS
     ================================================== -->
@@ -57,13 +56,13 @@
 
                     </div>
 
-                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                    <a class="s-header__menu-toggle" href="#site-navigation"><span>Menu</span></a>
                 </div> <!-- end s-header__block -->
 
 
                 <?php
                 wp_nav_menu([
-                    'theme_lcoation'  => 'main-menu',
+                    'theme_location'  => 'khater-main-menu',
                     'menu_class'      => 's-header__nav',
                     'container'       => 'nav',
                     'container_class' => 's-header__nav',
