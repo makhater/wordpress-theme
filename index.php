@@ -117,21 +117,21 @@ $queryApp = new WP_Query(array('category_name' => 'app'));
         <div class="row block-lg-one-fourth block-tab-one-half block-stack s-about__stats">
 
             <div class="column s-about__stats-item">
-                <div class="s-about__stats-count stats-count-total-num"><?= get_theme_mod('stats-count-total-num'); ?><span><?= get_theme_mod('stats-count-total-symbol'); ?></span></div>
-                <h5><?= get_theme_mod('stats-count-total-desc'); ?></h5>
+                <div class="s-about__stats-count stats-count-total-num"><?= esc_html(get_theme_mod('stats-count-total-num')); ?><span><?= esc_html(get_theme_mod('stats-count-total-symbol')); ?></span></div>
+                <h5><?= esc_html(get_theme_mod('stats-count-total-desc')); ?></h5>
             </div>
 
             <div class="column s-about__stats-item">
-                <div class="s-about__stats-count stats-count-visitor-num"><?= get_theme_mod('stats-count-visitor-num'); ?><span><?= get_theme_mod('stats-count-visitor-symbol'); ?></span></div>
-                <h5><?= get_theme_mod('stats-count-visitor-desc'); ?></h5>
+                <div class="s-about__stats-count stats-count-visitor-num"><?= esc_html(get_theme_mod('stats-count-visitor-num')); ?><span><?= esc_html(get_theme_mod('stats-count-visitor-symbol')); ?></span></div>
+                <h5><?= esc_html(get_theme_mod('stats-count-visitor-desc')); ?></h5>
             </div>
             <div class="column s-about__stats-item">
-                <div class="s-about__stats-count stats-count-rating-num"><?= get_theme_mod('stats-count-rating-num'); ?><span><?= get_theme_mod('stats-count-rating-symbol'); ?></span></div>
-                <h5><?= get_theme_mod('stats-count-rating-desc'); ?></h5>
+                <div class="s-about__stats-count stats-count-rating-num"><?= esc_html(get_theme_mod('stats-count-rating-num')); ?><span><?= esc_html(get_theme_mod('stats-count-rating-symbol')); ?></span></div>
+                <h5><?= esc_html(get_theme_mod('stats-count-rating-desc')); ?></h5>
             </div>
             <div class="column s-about__stats-item">
-                <div class="s-about__stats-count stats-count-users-num"><?= get_theme_mod('stats-count-users-num'); ?><span><?= get_theme_mod('stats-count-users-symbol'); ?></span></div>
-                <h5><?= get_theme_mod('stats-count-users-desc'); ?></h5>
+                <div class="s-about__stats-count stats-count-users-num"><?= esc_html(get_theme_mod('stats-count-users-num')); ?><span><?= esc_html(get_theme_mod('stats-count-users-symbol')); ?></span></div>
+                <h5><?= esc_html(get_theme_mod('stats-count-users-desc')); ?></h5>
             </div>
 
         </div> <!-- end stats -->
@@ -204,14 +204,14 @@ $queryApp = new WP_Query(array('category_name' => 'app'));
             <div class="column lg-12">
 
                 <div class="s-about__screens">
-                    <div class="s-about__screen about-screen-3'">
-                        <img src="<?= get_theme_mod('about-screen-3'); ?>">
+                    <div class="s-about__screen about-screen-3">
+                        <img src="<?= esc_url(get_theme_mod('about-screen-3')); ?>">
                     </div>
                     <div class="s-about__screen about-screen-2">
-                        <img src="<?= get_theme_mod('about-screen-2'); ?>">
+                        <img src="<?= esc_url(get_theme_mod('about-screen-2')); ?>">
                     </div>
                     <div class="s-about__screen about-screen-1">
-                        <img src="<?= get_theme_mod('about-screen-1'); ?>">
+                        <img src="<?= esc_url(get_theme_mod('about-screen-1')); ?>">
                     </div>
                 </div>
 
@@ -255,8 +255,8 @@ $queryApp = new WP_Query(array('category_name' => 'app'));
                 <div class="column s-about__howto-screens-block">
 
                     <div class="s-about__howto-screens about-screen-4">
-                        <img src="<?= get_theme_mod('about-screen-1'); ?>">
-                        <img src="<?= get_theme_mod('about-screen-4'); ?>">
+                        <img src="<?= esc_url(get_theme_mod('about-screen-1')); ?>">
+                        <img src="<?= esc_url(get_theme_mod('about-screen-4')); ?>">
                     </div>
 
                 </div>
