@@ -17,7 +17,7 @@
                 <div class="column lg-5 md-6 stack-on-900">
                     <div class="footer__logo">
                         <a href="#">
-                            <img src="<?= get_theme_mod('footer_logo_image'); ?>">
+                            <img src="<?= esc_url(get_theme_mod('footer_logo_image')); ?>" alt="<?= esc_attr(get_bloginfo('name')); ?>">
                         </a>
                     </div>
 
@@ -41,7 +41,7 @@
 
                     <?php
                     wp_nav_menu([
-                        'theme_lcoation'  => 'main-menu',
+                        'theme_location'  => 'khater-main-menu',
                         'menu_class'      => 's-footer__site-links',
                         'container'       => 'nav',
                         'container_class' => 's-footer__site-links',
@@ -57,8 +57,8 @@
 
                     <div class="ss-copyright">
 
-                        <span class="mak-copyright"> <?= get_theme_mod('copyright_text'); ?></span>
-                        <span class="mak-designedby"> Designed by <a href="<?= get_theme_mod('designedby_link'); ?>"><?= get_theme_mod('designedby_text'); ?></a></span>
+                        <span class="mak-copyright"> <?= esc_html(get_theme_mod('copyright_text')); ?></span>
+                        <span class="mak-designedby"> Designed by <a href="<?= get_theme_mod('designedby_link'); ?>"><?= esc_html(get_theme_mod('designedby_text')); ?></a></span>
 
                     </div>
                 </div>
@@ -83,6 +83,7 @@
 
 
 
+        <?php wp_body_open(); ?>
         </body>
 
         </html>
